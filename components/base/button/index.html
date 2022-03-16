@@ -11,24 +11,28 @@
     <!-- Primary Meta Tags -->
     <title>Button</title>
     <meta name="title" content="Button">
+    <meta name="description" content="@view.base.button" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.garageapp.xyz/components/base/button/">
     <meta property="og:title" content="Button">
+    <meta property="og:description" content="@view.base.button">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.garageapp.xyz/components/base/button/">
     <meta property="twitter:title" content="Button">
+    <meta property="twitter:description" content="@view.base.button">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=2.0.700628887533" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=2.0.700754501316" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=2.0.700628887533" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=2.0.700754501316" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=2.0" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.0.700628887533" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=2.0.700754501316" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=2.0.700754501316" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -164,6 +168,190 @@
         <span>Button</span>
     </h1>
 </doc-anchor-target>
+<p><code v-pre>@view.base.button</code></p>
+<p>A button, which can perform <a href="/action/">Actions</a>.</p>
+<doc-anchor-target id="example">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#example">#</doc-anchor-trigger>
+        <span>Example</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;id&quot;: &quot;$id.home.logoutbutton&quot;,
+  &quot;type&quot;: &quot;@view.base.button&quot;,
+  &quot;title&quot;: &quot;@value.text.account.logout&quot;,
+  &quot;subtitle&quot;: &quot;@value.text($data.user.fullname)&quot;,
+  &quot;icon&quot;: &quot;@icon.account.logout&quot;,
+  &quot;icon_position&quot;: &quot;@style.position.top&quot;,
+  &quot;block&quot;: true,
+  &quot;variant&quot;: &quot;@style.variant.secondary&quot;,
+  &quot;actions&quot;: [
+    {
+      &quot;type&quot;: &quot;@action.account.logout&quot;,
+      &quot;on_complete&quot;: [
+        {
+          &quot;type&quot;: &quot;@action.navigate&quot;,
+          &quot;value&quot;: &quot;$screen.home&quot;
+        }
+      ]
+    }
+  ]
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="attributes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#attributes">#</doc-anchor-trigger>
+        <span>Attributes</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="title">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#title">#</doc-anchor-trigger>
+        <span>Title</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">title: Value</code></pre>
+</doc-codeblock></div>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Value</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../value</span>
+    </div>
+    <a href="../value" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="subtitle">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#subtitle">#</doc-anchor-trigger>
+        <span>Subtitle</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">subtitle: Value</code></pre>
+</doc-codeblock></div>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Value</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../value</span>
+    </div>
+    <a href="../value" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="icon">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#icon">#</doc-anchor-trigger>
+        <span>Icon</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">icon: Icon</code></pre>
+</doc-codeblock></div>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Icon</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../icon</span>
+    </div>
+    <a href="../icon" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="icon-position">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#icon-position">#</doc-anchor-trigger>
+        <span>Icon Position</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">icon_position: Position</code></pre>
+</doc-codeblock></div>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Style position</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../style/position</span>
+    </div>
+    <a href="../style/position" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="block">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#block">#</doc-anchor-trigger>
+        <span>Block</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">block: true | false</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="variant">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#variant">#</doc-anchor-trigger>
+        <span>Variant</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">variant: Variant</code></pre>
+</doc-codeblock></div>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Style variant</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../style/variant</span>
+    </div>
+    <a href="../style/variant" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="actions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#actions">#</doc-anchor-trigger>
+        <span>Actions</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">actions: [Action]</code></pre>
+</doc-codeblock></div>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Action</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../action</span>
+    </div>
+    <a href="../action" class="absolute block inset-0"></a>
+</div>
+</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -230,6 +418,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Button", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Button", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
